@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Crisis Hub - Join the Movement</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Climate Crisis Hub</div>
+    <nav>
+      <a href="index.html" class="btn">Home</a>
+      <a href="about.html" class="btn">About</a>
+      <a href="causes.html" class="btn">Causes</a>
+      <a href="effects.html" class="btn">Effects</a>
+      <a href="philippines.html" class="btn">Philippines</a>
+      <a href="statistics.html" class="btn">Statistics</a>
+      <a href="videos.html" class="btn">Videos</a>
+      <a href="movement.html" class="btn">Movement</a>
+      <a href="arctic-help.html" class="btn">Arctic Help</a>
+    </nav>
+  </header>
+
+  <!-- Join the Movement -->
+  <section class="movement reveal reveal-up">
+    <h2><i class="fas fa-hands-helping"></i> Join the Climate Movement</h2>
+    <ul class="reveal reveal-stagger reveal-stagger-up">
+      <li><span>1</span> <strong>Reduce Your Carbon Footprint</strong> – Make eco-friendly choices daily.</li>
+      <li><span>2</span> <strong>Support Climate Policies</strong> – Advocate for government and corporate action.</li>
+      <li><span>3</span> <strong>Spread Awareness</strong> – Educate your community and inspire change.</li>
+      <li><span>4</span> <strong>Get Involved Locally</strong> – Participate in community initiatives.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="reveal reveal-left">
+    <p>© 2025 Climate Crisis Hub | All Rights Reserved</p>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="causes.html">Causes</a> |
+      <a href="effects.html">Effects</a> |
+      <a href="philippines.html">Philippines</a> |
+      <a href="statistics.html">Statistics</a> |
+      <a href="videos.html">Videos</a> |
+      <a href="movement.html">Movement</a> |
+      <a href="arctic-help.html">Arctic Help</a>
+    </nav>
+  </footer>
+
+  <!-- Inline styles for animations -->
+  <style>
+    /* Reduced motion for new animations */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal.reveal-visible,
+      .reveal-stagger > *,
+      .reveal-stagger.reveal-visible > * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+
+  <script>
+    (function () {
+      // Force animations on this page even if the OS prefers reduced motion
+      document.body.classList.add('force-anim');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const force = document.body.classList.contains('force-anim');
+      const revealEls = Array.from(document.querySelectorAll('.reveal'));
+      console.log('[Reveal] targets:', revealEls.length, 'reduceMotion:', reduceMotion, 'force:', force);
+
+      if (revealEls.length === 0) return;
+      // Only disable animations if user prefers reduced motion AND we're not forcing animations
+      if (reduceMotion && !force) {
+        revealEls.forEach(el => el.classList.add('reveal-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('reveal-visible');
+              console.log('[Reveal] shown:', entry.target.className);
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        // Reveal as soon as any part enters, and a bit before the bottom of the viewport
+        { root: null, rootMargin: '0px 0px -15% 0px', threshold: 0 }
+      );
+
+      // Observe all targets
+      revealEls.forEach(el => observer.observe(el));
+      console.log('[Reveal] observing all targets');
+    })();
+  </script>
+</body>
+</html>

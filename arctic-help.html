@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Crisis Hub - Arctic Help</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Climate Crisis Hub</div>
+    <nav>
+      <a href="index.html" class="btn">Home</a>
+      <a href="about.html" class="btn">About</a>
+      <a href="causes.html" class="btn">Causes</a>
+      <a href="effects.html" class="btn">Effects</a>
+      <a href="philippines.html" class="btn">Philippines</a>
+      <a href="statistics.html" class="btn">Statistics</a>
+      <a href="videos.html" class="btn">Videos</a>
+      <a href="movement.html" class="btn">Movement</a>
+      <a href="arctic-help.html" class="btn">Arctic Help</a>
+    </nav>
+  </header>
+
+  <!-- Arctic Help Interactive Section -->
+  <section class="arctic-help reveal reveal-down" aria-label="Help the polar bear with ice">
+    <div class="nature-question">
+      <h2>Do you love mother nature?</h2>
+      <div class="button-container">
+        <button class="nature-btn yes-btn" id="yesBtn">Yes</button>
+        <button class="nature-btn no-btn" id="noBtn">No</button>
+      </div>
+    </div>
+    <div class="arctic-stage">
+      <button class="bear-btn bear-dry" id="polarBear" aria-label="Dying polar bear" title="Polar bear needs ice">
+        <!-- Inline Polar Bear SVG Icon -->
+        <svg class="bear-svg" viewBox="0 0 64 64" role="img" aria-label="Polar bear icon" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bearFaceGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#e6f4fa"/>
+            </linearGradient>
+          </defs>
+          <!-- Ears -->
+          <circle cx="18" cy="16" r="8" fill="url(#bearFaceGrad)" stroke="#cfd8dc" stroke-width="2"/>
+          <circle cx="46" cy="16" r="8" fill="url(#bearFaceGrad)" stroke="#cfd8dc" stroke-width="2"/>
+          <!-- Head -->
+          <circle cx="32" cy="32" r="22" fill="url(#bearFaceGrad)" stroke="#cfd8dc" stroke-width="2"/>
+          <!-- Eyes -->
+          <circle cx="24" cy="30" r="2.5" fill="#263238"/>
+          <circle cx="40" cy="30" r="2.5" fill="#263238"/>
+          <!-- Snout -->
+          <ellipse cx="32" cy="38" rx="9" ry="7" fill="#f1fbff" stroke="#cfd8dc" stroke-width="1.5"/>
+          <circle cx="32" cy="37" r="2.6" fill="#263238"/>
+          <path d="M26 41 Q32 45 38 41" stroke="#90a4ae" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="catapult-btn" id="iceCatapult" aria-label="Catapult ice" title="Launch ice to the polar bear">
+        <span class="arm" aria-hidden="true"></span>
+        <i class="fas fa-icicles" aria-hidden="true"></i>
+      </button>
+    </div>
+    <p class="arctic-note">Launch ice to help the polar bear!</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="reveal reveal-left">
+    <p>© 2025 Climate Crisis Hub | All Rights Reserved</p>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="causes.html">Causes</a> |
+      <a href="effects.html">Effects</a> |
+      <a href="philippines.html">Philippines</a> |
+      <a href="statistics.html">Statistics</a> |
+      <a href="videos.html">Videos</a> |
+      <a href="movement.html">Movement</a> |
+      <a href="arctic-help.html">Arctic Help</a>
+    </nav>
+  </footer>
+
+  <!-- Inline styles for animations -->
+  <style>
+    /* Reduced motion for new animations */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .reveal.reveal-visible,
+      .reveal-stagger > *,
+      .reveal-stagger.reveal-visible > * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* Nature Question Styles */
+    .nature-question {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .nature-question h2 {
+      font-size: 2rem;
+      color: #388e3c;
+      margin-bottom: 1rem;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .nature-btn {
+      padding: 0.8rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .yes-btn {
+      background: linear-gradient(135deg, #4caf50, #66bb6a);
+      color: white;
+    }
+
+    .no-btn {
+      background: linear-gradient(135deg, #f44336, #ef5350);
+      color: white;
+    }
+
+    .nature-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Confetti Animation */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #f44336;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      animation: confetti-fall 3s ease-in-out forwards;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    .surprise-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      text-align: center;
+      z-index: 1001;
+      display: none;
+    }
+  </style>
+
+  <script>
+    // Nature Question Interaction
+    (function() {
+      const noBtn = document.getElementById('noBtn');
+      const yesBtn = document.getElementById('yesBtn');
+      const surpriseMessage = document.createElement('div');
+      surpriseMessage.className = 'surprise-message';
+      surpriseMessage.innerHTML = '<h2>Good you should help us save it</h2>';
+      document.body.appendChild(surpriseMessage);
+
+      // Function to create confetti
+      function createConfetti() {
+        const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4caf50', '#8bc34a', '#cddc39', '#ffeb3b', '#ffc107', '#ff9800', '#ff5722'];
+        for (let i = 0; i < 100; i++) {
+          const confetti = document.createElement('div');
+          confetti.className = 'confetti';
+          confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = Math.random() * 100 + 'vw';
+          confetti.style.animationDelay = Math.random() * 3 + 's';
+          document.body.appendChild(confetti);
+          setTimeout(() => confetti.remove(), 3000);
+        }
+      }
+
+      // Evasion logic for "No" button
+      function evadeCursor(e) {
+        if (!noBtn) return;
+        const rect = noBtn.getBoundingClientRect();
+        const btnCenterX = rect.left + rect.width / 2;
+        const btnCenterY = rect.top + rect.height / 2;
+        const cursorX = e.clientX;
+        const cursorY = e.clientY;
+        const distance = Math.sqrt((cursorX - btnCenterX) ** 2 + (cursorY - btnCenterY) ** 2);
+
+        if (distance < 150) { // Increased detection distance to 150px
+          const maxDistance = 350; // Increased movement distance to 350px
+          const angle = Math.random() * Math.PI * 2;
+          const moveX = Math.cos(angle) * maxDistance;
+          const moveY = Math.sin(angle) * maxDistance;
+
+          const newX = Math.max(0, Math.min(window.innerWidth - rect.width, rect.left + moveX));
+          const newY = Math.max(0, Math.min(window.innerHeight - rect.height, rect.top + moveY));
+
+          noBtn.style.position = 'fixed';
+          noBtn.style.left = newX + 'px';
+          noBtn.style.top = newY + 'px';
+
+          // Add a secondary evasion after a short delay to make it "faster"
+          setTimeout(() => {
+            if (noBtn) {
+              const secondAngle = Math.random() * Math.PI * 2;
+              const secondMoveX = Math.cos(secondAngle) * 250;
+              const secondMoveY = Math.sin(secondAngle) * 250;
+
+              const secondNewX = Math.max(0, Math.min(window.innerWidth - rect.width, newX + secondMoveX));
+              const secondNewY = Math.max(0, Math.min(window.innerHeight - rect.height, newY + secondMoveY));
+
+              noBtn.style.left = secondNewX + 'px';
+              noBtn.style.top = secondNewY + 'px';
+            }
+          }, 100); // 100ms delay for rapid secondary movement
+        }
+      }
+
+      // Yes button click handler
+      if (yesBtn) {
+        yesBtn.addEventListener('click', function() {
+          surpriseMessage.style.display = 'block';
+          createConfetti();
+          setTimeout(() => {
+            surpriseMessage.style.display = 'none';
+          }, 5000);
+        });
+      }
+
+      // Add evasion event listener
+      document.addEventListener('mousemove', evadeCursor);
+    })();
+
+    // Arctic Help: catapult launches ice to polar bear
+    (function() {
+      const catapult = document.getElementById('iceCatapult');
+      const bear = document.getElementById('polarBear');
+      if (!catapult || !bear) return;
+
+      let cooldown = false;
+
+      function centerOf(el) {
+        const r = el.getBoundingClientRect();
+        return { x: r.left + r.width/2, y: r.top + r.height/2 };
+      }
+
+      function catapultArmTip(el) {
+        // approximates the top of the arm element
+        const btn = el.getBoundingClientRect();
+        const arm = el.querySelector('.arm');
+        if (!arm) return centerOf(el);
+        const ar = arm.getBoundingClientRect();
+        // tip near the top of the arm rect
+        const tipX = ar.left + ar.width/2;
+        const tipY = ar.top + 6; // a bit below top for nicer feel
+        return { x: tipX, y: tipY };
+      }
+
+      function spawnSplash(x, y) {
+        // ring
+        const ring = document.createElement('span');
+        ring.className = 'splash-ring';
+        ring.style.left = x + 'px';
+        ring.style.top = y + 'px';
+        document.body.appendChild(ring);
+        setTimeout(() => ring.remove(), 800);
+
+        // shards
+        const shards = 8;
+        for (let i = 0; i < shards; i++) {
+          const s = document.createElement('span');
+          s.className = 'splash-shard';
+          const angle = (Math.PI * 2 * i / shards) + (Math.random() * 0.4 - 0.2);
+          const dist = 20 + Math.random() * 14;
+          const tx = x + Math.cos(angle) * dist;
+          const ty = y + Math.sin(angle) * dist;
+          s.style.left = tx + 'px';
+          s.style.top = ty + 'px';
+          s.style.transform = `translate(-50%, -50%) rotate(${(angle*180/Math.PI).toFixed(0)}deg)`;
+          document.body.appendChild(s);
+          setTimeout(() => s.remove(), 700);
+        }
+      }
+
+      function launchIce() {
+        if (cooldown) return;
+        cooldown = true;
+        setTimeout(() => cooldown = false, 800); // brief cooldown
+
+        // start from the catapult arm tip (right side)
+        const start = catapultArmTip(catapult);
+        const end = centerOf(bear);
+
+        const ice = document.createElement('span');
+        ice.className = 'ice-chunk';
+
+        // Position via transform translate from (0,0)
+        ice.style.transform = `translate(${start.x}px, ${start.y}px) rotate(0deg)`;
+        document.body.appendChild(ice);
+
+        // animate catapult arm
+        catapult.classList.add('arm-active');
+
+        // 5s arc animation from right (catapult) to left (bear)
+        const duration = 5000; // ms
+        const arcHeight = Math.max(120, Math.abs(end.x - start.x) * 0.25); // height of arc
+        const startTime = performance.now();
+        const startX = start.x;
+        const startY = start.y;
+        const dx = end.x - start.x;
+        const dy = end.y - start.y;
+        const spinStart = 0;
+        const spinEnd = 720; // degrees over flight
+
+        function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+
+        function step(now){
+          const elapsed = now - startTime;
+          let t = Math.min(elapsed / duration, 1);
+          const te = easeOutCubic(t);
+
+          // linear base path
+          const x = startX + dx * te;
+          const yLinear = startY + dy * te;
+          // arc offset (upwards then down)
+          const yArc = -Math.sin(Math.PI * te) * arcHeight; // negative lifts up
+          const y = yLinear + yArc;
+          const rot = spinStart + (spinEnd - spinStart) * te;
+
+          ice.style.transform = `translate(${x}px, ${y}px) rotate(${rot}deg)`;
+
+          if (t < 1){
+            requestAnimationFrame(step);
+          } else {
+            // arrival
+            ice.remove();
+            catapult.classList.remove('arm-active');
+            // splash at bear center and shake the bear
+            spawnSplash(end.x, end.y);
+            bear.classList.add('bear-shake');
+            // Make bear lively
+            bear.classList.remove('bear-dry');
+            bear.classList.add('bear-happy');
+            // revert after a few seconds
+            setTimeout(() => {
+              bear.classList.remove('bear-happy');
+              bear.classList.remove('bear-shake');
+              bear.classList.add('bear-dry');
+            }, 6000);
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      // Click or keyboard to launch
+      catapult.addEventListener('click', launchIce);
+      catapult.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          launchIce();
+        }
+      });
+    })();
+
+    (function () {
+      // Force animations on this page even if the OS prefers reduced motion
+      document.body.classList.add('force-anim');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const force = document.body.classList.contains('force-anim');
+      const revealEls = Array.from(document.querySelectorAll('.reveal'));
+      console.log('[Reveal] targets:', revealEls.length, 'reduceMotion:', reduceMotion, 'force:', force);
+
+      if (revealEls.length === 0) return;
+      // Only disable animations if user prefers reduced motion AND we're not forcing animations
+      if (reduceMotion && !force) {
+        revealEls.forEach(el => el.classList.add('reveal-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('reveal-visible');
+              console.log('[Reveal] shown:', entry.target.className);
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        // Reveal as soon as any part enters, and a bit before the bottom of the viewport
+        { root: null, rootMargin: '0px 0px -15% 0px', threshold: 0 }
+      );
+
+      // Observe all targets
+      revealEls.forEach(el => observer.observe(el));
+      console.log('[Reveal] observing all targets');
+    })();
+  </script>
+</body>
+</html>
