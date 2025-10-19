@@ -134,6 +134,7 @@
     .no-btn {
       background: linear-gradient(135deg, #f44336, #ef5350);
       color: white;
+      transition: all 0.1s ease-out; /* Add smooth transition for position changes */
     }
 
     .nature-btn:hover {
@@ -216,8 +217,8 @@
         const cursorY = e.clientY;
         const distance = Math.sqrt((cursorX - btnCenterX) ** 2 + (cursorY - btnCenterY) ** 2);
 
-        if (distance < 150) { // Increased detection distance to 150px
-          const maxDistance = 350; // Increased movement distance to 350px
+        if (distance < 150) {
+          const maxDistance = 400; // Increased to 400px for larger jumps
           const angle = Math.random() * Math.PI * 2;
           const moveX = Math.cos(angle) * maxDistance;
           const moveY = Math.sin(angle) * maxDistance;
@@ -225,24 +226,38 @@
           const newX = Math.max(0, Math.min(window.innerWidth - rect.width, rect.left + moveX));
           const newY = Math.max(0, Math.min(window.innerHeight - rect.height, rect.top + moveY));
 
-          noBtn.style.position = 'fixed';
           noBtn.style.left = newX + 'px';
           noBtn.style.top = newY + 'px';
 
-          // Add a secondary evasion after a short delay to make it "faster"
+          // First rapid follow-up after 50ms
           setTimeout(() => {
             if (noBtn) {
               const secondAngle = Math.random() * Math.PI * 2;
-              const secondMoveX = Math.cos(secondAngle) * 250;
-              const secondMoveY = Math.sin(secondAngle) * 250;
+              const secondMoveX = Math.cos(secondAngle) * 300;
+              const secondMoveY = Math.sin(secondAngle) * 300;
 
               const secondNewX = Math.max(0, Math.min(window.innerWidth - rect.width, newX + secondMoveX));
               const secondNewY = Math.max(0, Math.min(window.innerHeight - rect.height, newY + secondMoveY));
 
               noBtn.style.left = secondNewX + 'px';
               noBtn.style.top = secondNewY + 'px';
+
+              // Second rapid follow-up after another 50ms for ultra-fast evasion
+              setTimeout(() => {
+                if (noBtn) {
+                  const thirdAngle = Math.random() * Math.PI * 2;
+                  const thirdMoveX = Math.cos(thirdAngle) * 250;
+                  const thirdMoveY = Math.sin(thirdAngle) * 250;
+
+                  const thirdNewX = Math.max(0, Math.min(window.innerWidth - rect.width, secondNewX + thirdMoveX));
+                  const thirdNewY = Math.max(0, Math.min(window.innerHeight - rect.height, secondNewY + thirdMoveY));
+
+                  noBtn.style.left = thirdNewX + 'px';
+                  noBtn.style.top = thirdNewY + 'px';
+                }
+              }, 50); // 50ms for third movement
             }
-          }, 100); // 100ms delay for rapid secondary movement
+          }, 50); // Reduced to 50ms for faster response
         }
       }
 
