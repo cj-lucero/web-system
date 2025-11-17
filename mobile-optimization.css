@@ -195,6 +195,90 @@
     border-radius: 8px !important;
   }
   
+  /* Arctic Help Page Mobile Optimizations */
+  .arctic-help {
+    padding: 2em 1em !important;
+    margin: 1em 0 !important;
+  }
+  
+  .nature-question {
+    text-align: center !important;
+    margin-bottom: 2em !important;
+  }
+  
+  .nature-question h2 {
+    font-size: 1.5em !important;
+    margin-bottom: 1.5em !important;
+    line-height: 1.3 !important;
+  }
+  
+  .button-container {
+    flex-direction: column !important;
+    gap: 1em !important;
+    margin-top: 1em !important;
+    align-items: center !important;
+  }
+  
+  .nature-btn {
+    width: 80% !important;
+    max-width: 250px !important;
+    padding: 1rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    border-radius: 20px !important;
+    margin: 0 !important;
+  }
+  
+  .arctic-stage {
+    position: relative !important;
+    height: 300px !important;
+    margin: 2em auto !important;
+    max-width: 350px !important;
+  }
+  
+  .bear-btn {
+    width: 120px !important;
+    height: 120px !important;
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  .bear-svg {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .catapult-btn {
+    width: 60px !important;
+    height: 60px !important;
+    position: absolute !important;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+  
+  .catapult-btn .arm {
+    width: 40px !important;
+    height: 4px !important;
+  }
+  
+  .catapult-btn i {
+    font-size: 1.5rem !important;
+  }
+  
+  .arctic-note {
+    text-align: center !important;
+    font-size: 0.9em !important;
+    margin-top: 1em !important;
+    padding: 0 1em !important;
+  }
+  
+  /* Confetti mobile optimization */
+  .confetti {
+    width: 8px !important;
+    height: 8px !important;
+  }
+  
   /* Spacing adjustments */
   .container-fluid {
     padding-left: 1em !important;
@@ -225,6 +309,54 @@
     width: 100%;
     margin: 1em 0;
   }
+  
+  /* Arctic Help extra small optimizations */
+  .arctic-help {
+    padding: 1.5em 0.5em !important;
+  }
+  
+  .nature-question h2 {
+    font-size: 1.3em !important;
+    margin-bottom: 1em !important;
+  }
+  
+  .nature-btn {
+    width: 90% !important;
+    max-width: 200px !important;
+    padding: 0.8rem 1rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .arctic-stage {
+    height: 250px !important;
+    max-width: 300px !important;
+    margin: 1.5em auto !important;
+  }
+  
+  .bear-btn {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .bear-svg {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .catapult-btn {
+    width: 50px !important;
+    height: 50px !important;
+    right: 15px !important;
+  }
+  
+  .catapult-btn i {
+    font-size: 1.2rem !important;
+  }
+  
+  .arctic-note {
+    font-size: 0.85em !important;
+    padding: 0 0.5em !important;
+  }
 }
 
 /* Landscape Mobile */
@@ -235,6 +367,59 @@
   
   section {
     padding: 1.5em 1em !important;
+  }
+  
+  /* Arctic Help landscape optimizations */
+  .arctic-help {
+    padding: 1.5em 1em !important;
+  }
+  
+  .nature-question h2 {
+    font-size: 1.4em !important;
+    margin-bottom: 1em !important;
+  }
+  
+  .button-container {
+    flex-direction: row !important;
+    gap: 1.5em !important;
+    justify-content: center !important;
+  }
+  
+  .nature-btn {
+    width: auto !important;
+    max-width: 180px !important;
+    padding: 0.8rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .arctic-stage {
+    height: 200px !important;
+    max-width: 400px !important;
+    margin: 1em auto !important;
+  }
+  
+  .bear-btn {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  
+  .bear-svg {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .catapult-btn {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  
+  .catapult-btn i {
+    font-size: 1.1rem !important;
+  }
+  
+  .arctic-note {
+    font-size: 0.8em !important;
+    margin-top: 0.5em !important;
   }
 }
 
@@ -251,6 +436,35 @@
   img:hover {
     transform: none !important;
     box-shadow: 0 0 20px #388e3c !important;
+  }
+  
+  /* Arctic Help touch optimizations */
+  .nature-btn:hover {
+    transform: none !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+  }
+  
+  .nature-btn:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s ease !important;
+  }
+  
+  .bear-btn:hover {
+    transform: translateX(-50%) scale(1.05) !important;
+  }
+  
+  .bear-btn:active {
+    transform: translateX(-50%) scale(0.95) !important;
+    transition: transform 0.1s ease !important;
+  }
+  
+  .catapult-btn:hover {
+    transform: scale(1.05) !important;
+  }
+  
+  .catapult-btn:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s ease !important;
   }
 }
 
