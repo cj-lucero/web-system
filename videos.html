@@ -68,7 +68,7 @@
     <div class="videos-text">
       <h2><i class="fas fa-video"></i> Related Videos</h2>
       <p>Gain a deeper understanding of climate change and its impact on societies and the environment.</p>
-      <button id="goToVideoBtn" href="#videos" class="btn-green" onclick="showVideo()">Go to Video Resources</button>
+      <button id="goToVideoBtn" class="btn-green" onclick="showVideo()">Go to Video Resources</button>
     </div>
   </section>
 
@@ -120,6 +120,7 @@
     // Function to show video and scroll to it
     function showVideo() {
       console.log('showVideo function called');
+      window.location.href = "#videos";
       const videoContainer = document.getElementById('videoContainer');
       const videosSection = document.getElementById('videos');
       
