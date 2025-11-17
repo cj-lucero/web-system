@@ -120,7 +120,9 @@
     // Function to show video and scroll to it
     function showVideo() {
       console.log('showVideo function called');
-      window.location.href = "#videos";
+      document.getElementById("videos").scrollIntoView({ 
+            behavior: "smooth"
+          });      
       const videoContainer = document.getElementById('videoContainer');
       const videosSection = document.getElementById('videos');
       
