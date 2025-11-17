@@ -68,7 +68,6 @@
     <div class="videos-text">
       <h2><i class="fas fa-video"></i> Related Videos</h2>
       <p>Gain a deeper understanding of climate change and its impact on societies and the environment.</p>
-      <a href="#videos" class="btn-green">Go to Video Resources</a>
     </div>
   </section>
 
@@ -114,19 +113,11 @@
   </style>
 
   <script>
-    // Show video section when clicking the button
-    document.querySelector('.btn-green[href="#videos"]').addEventListener('click', function(e) {
-      e.preventDefault();
+    // Show video section automatically when page loads
+    document.addEventListener('DOMContentLoaded', function() {
       const videosSection = document.getElementById('videos');
       videosSection.style.display = 'flex';
-      videosSection.style.opacity = '0';
-      videosSection.scrollIntoView({ behavior: 'smooth' });
-
-      // Fade in effect
-      setTimeout(() => {
-        videosSection.style.transition = 'opacity 0.5s ease-in-out';
-        videosSection.style.opacity = '1';
-      }, 100);
+      videosSection.style.opacity = '1';
     });
 
     (function () {
