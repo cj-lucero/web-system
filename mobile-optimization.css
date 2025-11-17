@@ -1,0 +1,285 @@
+/* Mobile Optimization CSS - Add to existing style.css */
+
+/* Bootstrap Override for Mobile */
+@media (max-width: 768px) {
+  /* Navbar Mobile Adjustments */
+  .navbar {
+    padding: 0.5em 1em !important;
+    border-radius: 0 !important;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+  }
+  
+  /* Add body padding to account for fixed navbar */
+  body {
+    padding-top: 70px !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2em !important;
+  }
+  
+  .navbar-nav {
+    background: rgba(56, 142, 60, 0.95);
+    padding: 1em;
+    border-radius: 12px;
+    margin-top: 1em;
+    backdrop-filter: blur(10px);
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.8em 1em !important;
+    margin: 0.2em 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.95em;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background: rgba(2, 136, 209, 0.2);
+  }
+  
+  .navbar-nav .nav-link.active {
+    background: rgba(2, 136, 209, 0.3);
+  }
+  
+  /* Hero Section Mobile */
+  .hero {
+    padding: 2em 1.5em !important;
+    margin: 0.5em 0 !important;
+    border-radius: 12px !important;
+  }
+  
+  .hero h1 {
+    font-size: 1.8em !important;
+    margin-bottom: 0.5em !important;
+  }
+  
+  .hero p {
+    font-size: 1em !important;
+    margin-bottom: 1.5em !important;
+  }
+  
+  /* Section Layouts Mobile */
+  section {
+    flex-direction: column !important;
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+    gap: 1.5em !important;
+    border-radius: 12px !important;
+  }
+  
+  section img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+  }
+  
+  .section-content {
+    text-align: center;
+  }
+  
+  /* Cards Mobile */
+  .card {
+    margin-bottom: 1em;
+    border-radius: 12px !important;
+  }
+  
+  .card-body {
+    padding: 1em !important;
+  }
+  
+  /* Buttons Mobile */
+  .btn-green {
+    padding: 0.8em 1.5em !important;
+    font-size: 0.95em !important;
+    border-radius: 12px !important;
+    display: inline-block !important;
+    margin: 0.5em 0 !important;
+  }
+  
+  .btn-green:hover {
+    transform: scale(1.02) !important;
+  }
+  
+  /* Typography Mobile */
+  h1 {
+    font-size: 1.8em !important;
+    margin-bottom: 0.8em !important;
+  }
+  
+  h2 {
+    font-size: 1.5em !important;
+    margin-bottom: 0.6em !important;
+  }
+  
+  h3 {
+    font-size: 1.3em !important;
+    margin-bottom: 0.5em !important;
+  }
+  
+  p, li {
+    font-size: 0.95em !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0.8em !important;
+  }
+  
+  /* Grid System Mobile */
+  .row {
+    margin: 0 !important;
+  }
+  
+  .col-md-4, .col-md-6, .col-md-8, .col-md-12 {
+    padding: 0.5em !important;
+    margin-bottom: 1em;
+  }
+  
+  /* Forms Mobile */
+  .form-control {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 0.8em !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Images Mobile */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Footer Mobile */
+  footer {
+    padding: 1.5em 1em !important;
+    text-align: center !important;
+    margin-top: 2em !important;
+  }
+  
+  footer .row {
+    text-align: center !important;
+  }
+  
+  /* Lists Mobile */
+  ul, ol {
+    padding-left: 1.5em !important;
+    margin-bottom: 1em !important;
+  }
+  
+  li {
+    margin-bottom: 0.5em !important;
+  }
+  
+  /* Tables Mobile */
+  .table-responsive {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+  }
+  
+  table {
+    font-size: 0.9em !important;
+  }
+  
+  /* Animations - Reduce on mobile for performance */
+  .reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  /* Videos Mobile */
+  iframe, video {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Spacing adjustments */
+  .container-fluid {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+  }
+}
+
+/* Extra Small Devices (phones in portrait) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 2em 1em !important;
+  }
+  
+  .hero h1 {
+    font-size: 1.5em !important;
+  }
+  
+  section {
+    padding: 1.5em 1em !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1em !important;
+  }
+  
+  .btn-green {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 2em 1.5em !important;
+  }
+  
+  section {
+    padding: 1.5em 1em !important;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .navbar-nav .nav-link:hover {
+    background: transparent !important;
+  }
+  
+  .btn-green:hover {
+    transform: none !important;
+  }
+  
+  img:hover {
+    transform: none !important;
+    box-shadow: 0 0 20px #388e3c !important;
+  }
+}
+
+/* Bootstrap mobile fixes */
+.navbar-toggler {
+  border: none !important;
+  padding: 0.25em 0.5em !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-collapse {
+  background: rgba(56, 142, 60, 0.95);
+  border-radius: 12px;
+  padding: 1em;
+  margin-top: 0.5em;
+}
+
+/* Ensure proper spacing on mobile */
+.container {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+  }
+}

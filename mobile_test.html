@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mobile Optimization Test - Climate Crisis Hub</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    .test-section {
+      border: 2px dashed #388e3c;
+      margin: 1em;
+      padding: 1em;
+      border-radius: 12px;
+    }
+    .device-info {
+      position: fixed;
+      top: 80px;
+      right: 10px;
+      background: rgba(56, 142, 60, 0.9);
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Device Info Display -->
+  <div class="device-info">
+    <div id="device-width">Width: </div>
+    <div id="device-height">Height: </div>
+    <div id="device-orientation">Orientation: </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Climate Crisis Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><i class="bi bi-info-circle"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="causes.html"><i class="bi bi-exclamation-triangle"></i> Causes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="effects.html"><i class="bi bi-activity"></i> Effects</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero container-fluid">
+    <h1>Mobile Optimization Test</h1>
+    <p>Test your website's mobile responsiveness and performance.</p>
+    <a href="index.html" class="btn-green">Back to Home</a>
+  </section>
+
+  <!-- Test Sections -->
+  <div class="container-fluid">
+    <div class="test-section">
+      <h2>Navigation Test</h2>
+      <p>The navbar should collapse into a hamburger menu on mobile devices.</p>
+      <p><strong>Test:</strong> Resize your browser window or view on a mobile device.</p>
+    </div>
+
+    <div class="test-section">
+      <h2>Typography Test</h2>
+      <h1>Heading 1 - Mobile Optimized</h1>
+      <h2>Heading 2 - Mobile Optimized</h2>
+      <h3>Heading 3 - Mobile Optimized</h3>
+      <p>This paragraph should be readable on mobile devices with proper font size and line height.</p>
+    </div>
+
+    <div class="test-section">
+      <h2>Button Test</h2>
+      <a href="#" class="btn-green">Primary Button</a>
+      <a href="#" class="btn btn-secondary">Secondary Button</a>
+      <p>Buttons should be easily tappable on mobile devices.</p>
+    </div>
+
+    <div class="test-section">
+      <h2>Image Test</h2>
+      <img src="https://via.placeholder.com/300x200" alt="Test Image" class="img-fluid">
+      <p>Images should be responsive and scale properly on mobile devices.</p>
+    </div>
+
+    <div class="test-section">
+      <h2>Grid Test</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5>Column 1</h5>
+              <p>This should stack vertically on mobile.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5>Column 2</h5>
+              <p>This should stack vertically on mobile.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5>Column 3</h5>
+              <p>This should stack vertically on mobile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>Table Test</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Desktop</th>
+              <th>Mobile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Navigation</td>
+              <td>Horizontal</td>
+              <td>Hamburger Menu</td>
+            </tr>
+            <tr>
+              <td>Layout</td>
+              <td>Multi-column</td>
+              <td>Single Column</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="test-section">
+      <h2>Form Test</h2>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputMessage" class="form-label">Message</label>
+          <textarea class="form-control" id="exampleInputMessage" rows="3" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <p>&copy; 2024 Climate Crisis Hub. Mobile Optimization Test Page.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Display device information
+    function updateDeviceInfo() {
+      document.getElementById('device-width').textContent = 'Width: ' + window.innerWidth + 'px';
+      document.getElementById('device-height').textContent = 'Height: ' + window.innerHeight + 'px';
+      document.getElementById('device-orientation').textContent = 'Orientation: ' + (window.innerWidth > window.innerHeight ? 'Landscape' : 'Portrait');
+    }
+    
+    // Update on load and resize
+    window.addEventListener('load', updateDeviceInfo);
+    window.addEventListener('resize', updateDeviceInfo);
+    
+    // Add touch detection
+    if ('ontouchstart' in window) {
+      console.log('Touch device detected');
+    } else {
+      console.log('Non-touch device detected');
+    }
+  </script>
+</body>
+</html>
