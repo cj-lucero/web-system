@@ -75,7 +75,10 @@
     <div class="videos-text">
       <h2>Video Resources</h2>
       <p>Watch this video to learn more about climate change and its impacts.</p>
-      <div class="video-container">
+      <button id="playVideoBtn" class="btn btn-primary btn-lg play-video-btn">
+        <i class="fas fa-play"></i> Play Video
+      </button>
+      <div id="videoContainer" class="video-container" style="display: none;">
         <iframe src="https://www.youtube.com/embed/EtW2rrLHs08" title="Climate Change Explained" allowfullscreen></iframe>
       </div>
     </div>
@@ -113,6 +116,24 @@
   </style>
 
   <script>
+    // Video button functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const playVideoBtn = document.getElementById('playVideoBtn');
+      const videoContainer = document.getElementById('videoContainer');
+      
+      playVideoBtn.addEventListener('click', function() {
+        videoContainer.style.display = 'block';
+        videoContainer.style.opacity = '0';
+        playVideoBtn.style.display = 'none';
+        
+        // Fade in the video
+        setTimeout(() => {
+          videoContainer.style.transition = 'opacity 0.5s ease';
+          videoContainer.style.opacity = '1';
+        }, 100);
+      });
+    });
+
     (function () {
       // Force animations on this page even if the OS prefers reduced motion
       document.body.classList.add('force-anim');
