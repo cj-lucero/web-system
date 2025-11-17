@@ -273,6 +273,192 @@
     padding: 0 1em !important;
   }
   
+  /* Videos Page Mobile Optimizations */
+  .videos {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .videos-img {
+    margin-bottom: 2em !important;
+  }
+  
+  .videos-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+  }
+  
+  .videos-text {
+    text-align: center !important;
+  }
+  
+  .videos-text h2 {
+    font-size: 1.5em !important;
+    margin-bottom: 1em !important;
+  }
+  
+  .video-container {
+    margin: 2em 0 !important;
+    position: relative !important;
+    padding-bottom: 56.25% !important; /* 16:9 aspect ratio */
+    height: 0 !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+  }
+  
+  .video-container iframe {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Statistics Page Mobile Optimizations */
+  .statistics {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+    text-align: center !important;
+  }
+  
+  .statistics h2 {
+    font-size: 1.5em !important;
+    margin-bottom: 1em !important;
+  }
+  
+  .statistics img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 1.5em 0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  }
+  
+  .statistics p {
+    font-size: 0.95em !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1em !important;
+  }
+  
+  /* Philippines Page Mobile Optimizations */
+  .philippines {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+  }
+  
+  .philippines img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin: 1em 0 !important;
+  }
+  
+  /* Movement Page Mobile Optimizations */
+  .movement {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+  }
+  
+  .movement img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin: 1em 0 !important;
+  }
+  
+  /* Effects Page Mobile Optimizations */
+  .effects {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+  }
+  
+  .effects img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin: 1em 0 !important;
+  }
+  
+  /* Causes Page Mobile Optimizations */
+  .causes {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+  }
+  
+  .causes img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin: 1em 0 !important;
+  }
+  
+  /* About Page Mobile Optimizations */
+  .about {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+  }
+  
+  .about img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin: 1em 0 !important;
+  }
+  
+  /* Climate Change Page Mobile Optimizations */
+  .climate-change {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+  }
+  
+  .climate-change img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin: 1em 0 !important;
+  }
+  
+  /* Common content sections */
+  .content-section {
+    padding: 2em 1.5em !important;
+    margin: 1em 0.5em !important;
+    border-radius: 12px !important;
+  }
+  
+  .content-section img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin: 1em 0 !important;
+  }
+  
+  .content-section h2 {
+    font-size: 1.5em !important;
+    margin-bottom: 1em !important;
+  }
+  
+  .content-section p {
+    font-size: 0.95em !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1em !important;
+  }
+  
+  .content-section ul, .content-section ol {
+    padding-left: 1.5em !important;
+    margin-bottom: 1em !important;
+  }
+  
+  .content-section li {
+    margin-bottom: 0.5em !important;
+    font-size: 0.95em !important;
+    line-height: 1.6 !important;
+  }
+  
   /* Confetti mobile optimization */
   .confetti {
     width: 8px !important;
@@ -357,6 +543,54 @@
     font-size: 0.85em !important;
     padding: 0 0.5em !important;
   }
+  
+  /* Videos page extra small optimizations */
+  .videos {
+    padding: 1.5em 0.5em !important;
+  }
+  
+  .videos-text h2 {
+    font-size: 1.3em !important;
+  }
+  
+  .videos-text p {
+    font-size: 0.9em !important;
+  }
+  
+  /* Statistics page extra small optimizations */
+  .statistics {
+    padding: 1.5em 0.5em !important;
+  }
+  
+  .statistics h2 {
+    font-size: 1.3em !important;
+  }
+  
+  .statistics p {
+    font-size: 0.9em !important;
+  }
+  
+  /* All pages extra small optimizations */
+  section {
+    padding: 1.5em 0.5em !important;
+  }
+  
+  section h2 {
+    font-size: 1.3em !important;
+  }
+  
+  section p {
+    font-size: 0.9em !important;
+  }
+  
+  section img {
+    margin: 0.8em 0 !important;
+  }
+  
+  .btn-green {
+    padding: 0.8rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
 }
 
 /* Landscape Mobile */
@@ -420,6 +654,55 @@
   .arctic-note {
     font-size: 0.8em !important;
     margin-top: 0.5em !important;
+  }
+  
+  /* Videos page landscape optimizations */
+  .videos {
+    flex-direction: row !important;
+    padding: 1.5em 1em !important;
+    gap: 2em !important;
+    align-items: center !important;
+  }
+  
+  .videos-img {
+    flex: 1 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .videos-text {
+    flex: 1 !important;
+    text-align: left !important;
+  }
+  
+  .videos-text h2 {
+    font-size: 1.4em !important;
+  }
+  
+  /* Statistics page landscape optimizations */
+  .statistics {
+    padding: 1.5em 1em !important;
+  }
+  
+  .statistics h2 {
+    font-size: 1.4em !important;
+  }
+  
+  /* All pages landscape optimizations */
+  section {
+    padding: 1.5em 1em !important;
+  }
+  
+  section h2 {
+    font-size: 1.4em !important;
+  }
+  
+  section p {
+    font-size: 0.95em !important;
+  }
+  
+  .btn-green {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 0.95rem !important;
   }
 }
 
